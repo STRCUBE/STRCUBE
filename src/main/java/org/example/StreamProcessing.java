@@ -26,6 +26,7 @@ public class StreamProcessing {
         long lastLineOffsetNew = 0;
         int noOfRowsToBeDeleted =  0;
         boolean initialRead = true;
+        boolean earlySleep = false;
 
 
         String url = "jdbc:mysql://localhost:3306/DataModeling?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false&createDatabaseIfNotExist=true";
@@ -121,7 +122,13 @@ public class StreamProcessing {
             int noOfSkippedLinesInCurrentWindow = 0;
 
 
-            while ((line = br.readLine()) != null) {
+            while (true) {
+                line = br.readLine();
+                if(line == null){
+                    earlySleep = true;
+                    //Do any custom logic here like to recheck every 't' min
+                    break;
+                }
                 if (line.trim().isEmpty() || line.equals(header)) {
                     continue;
                 }
@@ -148,7 +155,6 @@ public class StreamProcessing {
                 if(windowSize - windowVelocity < 0 && noOfLinesReadInCurrentWindow >= windowSize){
                     break;
                 }
-
                  if (!initialRead && windowSize - windowVelocity > 0 && noOfLinesReadInCurrentWindow >= windowVelocity) {
                     break;
                 }
@@ -156,7 +162,7 @@ public class StreamProcessing {
                      break;
                  }
             }
-            initialRead=false;
+
 
             int[] updateCounts = stmt.executeBatch();
             System.out.println("INSERTED "+ updateCounts.length + " ROWS INTO FACT TABLE");
@@ -177,6 +183,14 @@ public class StreamProcessing {
 
             br.close();
             fileReader.close();
+            initialRead=false;
+            if(earlySleep){
+                if(windowSize > windowVelocity){
+                    initialRead = false; // prev data already present  for this
+                }
+                initialRead = true;
+            }
+            earlySleep = false;
 
             // Wait for clockTick seconds before checking the file again
             Thread.sleep(windowClockTickInMillis);
