@@ -100,18 +100,6 @@ public class StreamProcessing {
 
         while (true) {
 
-            if(noOfRowsToBeDeleted > 0){
-                deleteNRowsQuery.setInt(1, noOfRowsToBeDeleted);
-                int rowsDeleted = deleteNRowsQuery.executeUpdate();
-                System.out.println("FIRST " + rowsDeleted + " ROW DELETED FROM FACT TABLE");
-            }
-            else if(noOfRowsToBeDeleted <0){
-                 statement = conn.createStatement();
-                 deleteFactTableQuery = "DELETE FROM FactTable";
-                int rowsDeleted = statement.executeUpdate(deleteFactTableQuery);
-                System.out.println(rowsDeleted + " ALL ROWS DELETED FROM FACT TABLE");
-            }
-
             System.out.println("CHECKING FOR NEW FACTS");
             FileReader fileReader = new FileReader(csvFile);
             fileReader.skip(lastLineOffsetNew);
@@ -163,6 +151,18 @@ public class StreamProcessing {
                  }
             }
 
+            if(noOfRowsToBeDeleted > 0){
+                deleteNRowsQuery.setInt(1, noOfRowsToBeDeleted);
+                int rowsDeleted = deleteNRowsQuery.executeUpdate();
+                System.out.println("FIRST " + rowsDeleted + " ROW DELETED FROM FACT TABLE");
+            }
+            else if(noOfRowsToBeDeleted <0){
+                statement = conn.createStatement();
+                deleteFactTableQuery = "DELETE FROM FactTable";
+                int rowsDeleted = statement.executeUpdate(deleteFactTableQuery);
+                System.out.println(rowsDeleted + " ALL ROWS DELETED FROM FACT TABLE");
+            }
+
 
             int[] updateCounts = stmt.executeBatch();
             System.out.println("INSERTED "+ updateCounts.length + " ROWS INTO FACT TABLE");
@@ -174,6 +174,18 @@ public class StreamProcessing {
             }
             else{
                 noOfRowsToBeDeleted =  windowVelocity;
+            }
+
+            if(noOfRowsToBeDeleted > 0){
+                deleteNRowsQuery.setInt(1, noOfRowsToBeDeleted);
+                int rowsDeleted = deleteNRowsQuery.executeUpdate();
+                System.out.println("FIRST " + rowsDeleted + " ROW DELETED FROM FACT TABLE");
+            }
+            else if(noOfRowsToBeDeleted <0){
+                statement = conn.createStatement();
+                deleteFactTableQuery = "DELETE FROM FactTable";
+                int rowsDeleted = statement.executeUpdate(deleteFactTableQuery);
+                System.out.println(rowsDeleted + " ALL ROWS DELETED FROM FACT TABLE");
             }
 
 
