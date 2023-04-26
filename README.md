@@ -34,4 +34,4 @@ Xml Data Model and
 Relational (Sql Tables) Data Model.
 
 Architecture:<br/>
-<img src="https://iiitbac-my.sharepoint.com/:i:/g/personal/boppana_venkatesh_iiitb_ac_in/EeIgm-tkXCdAjXc1LWORd2oBmNcPwqPYB4G84dYzOCvcUg?e=3ExMvm">
+<img src="./Images/Architecture.jpeg">

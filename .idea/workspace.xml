@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b59d7af-6927-4048-8da1-649728047503" name="Changes" comment="Modified DMInstance.xml&#10;Separated Drive Class">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1881364c-15c4-41f4-9ac2-ee6bd9a5f78f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1881364c-15c4-41f4-9ac2-ee6bd9a5f78f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dimensions/Cuboids.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dimensions/Cuboids.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dimensions/DMInstance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dimensions/DMInstance.xml" afterDir="false" />
+    <list default="true" id="7b59d7af-6927-4048-8da1-649728047503" name="Changes" comment="Updated README.md">
+      <change afterPath="$PROJECT_DIR$/Images/Architecture" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +113,7 @@
       <workItem from="1681707698163" duration="2523000" />
       <workItem from="1681881877268" duration="2339000" />
       <workItem from="1682484038238" duration="2060000" />
-      <workItem from="1682520689697" duration="415000" />
+      <workItem from="1682520689697" duration="778000" />
     </task>
     <task id="LOCAL-00001" summary="README.md">
       <created>1679554747117</created>
@@ -245,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682434214775</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Updated README.md">
+      <created>1682521333673</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682521333673</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +282,7 @@
     <MESSAGE value="Updated: DMInstance.xml to add QUERY LABELS" />
     <MESSAGE value="Updated: Added Functionality ti Include QUERY LABELS" />
     <MESSAGE value="Modified DMInstance.xml&#10;Separated Drive Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified DMInstance.xml&#10;Separated Drive Class" />
+    <MESSAGE value="Updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
   </component>
 </project>
