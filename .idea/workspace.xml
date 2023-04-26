@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b59d7af-6927-4048-8da1-649728047503" name="Changes" comment="Updated: Added Functionality ti Include QUERY LABELS">
+    <list default="true" id="7b59d7af-6927-4048-8da1-649728047503" name="Changes" comment="Modified DMInstance.xml&#10;Separated Drive Class">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/1881364c-15c4-41f4-9ac2-ee6bd9a5f78f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1881364c-15c4-41f4-9ac2-ee6bd9a5f78f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dimensions/Cuboids.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dimensions/Cuboids.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dimensions/DMInstance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dimensions/DMInstance.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,40 +55,24 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.Driver">
-    <configuration name="Driver" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="org.example.Driver" />
+  <component name="RunManager" selected="Application.STRCUBEProcessor">
+    <configuration name="STRCUBEInit" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.example.STRCUBEInitialization" />
       <module name="DataModeling" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataModeling" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list />
-            </option>
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
+    <configuration name="STRCUBEProcessor" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.example.STRCUBEProceesor" />
+      <module name="DataModeling" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Driver" />
-      <item itemvalue="Maven.DataModeling" />
+      <item itemvalue="Application.STRCUBEInit" />
+      <item itemvalue="Application.STRCUBEProcessor" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -130,6 +116,8 @@
       <workItem from="1681619914932" duration="856000" />
       <workItem from="1681707698163" duration="2523000" />
       <workItem from="1681881877268" duration="2339000" />
+      <workItem from="1682484038238" duration="2060000" />
+      <workItem from="1682520689697" duration="415000" />
     </task>
     <task id="LOCAL-00001" summary="README.md">
       <created>1679554747117</created>
@@ -250,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681317583328</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Modified DMInstance.xml&#10;Separated Drive Class">
+      <created>1682434214775</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682434214775</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +278,7 @@
     <MESSAGE value="Updated: DMInstance.xml TO GENERATE SUMMARY TABLE" />
     <MESSAGE value="Updated: DMInstance.xml to add QUERY LABELS" />
     <MESSAGE value="Updated: Added Functionality ti Include QUERY LABELS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated: Added Functionality ti Include QUERY LABELS" />
+    <MESSAGE value="Modified DMInstance.xml&#10;Separated Drive Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified DMInstance.xml&#10;Separated Drive Class" />
   </component>
 </project>

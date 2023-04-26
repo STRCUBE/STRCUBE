@@ -157,8 +157,6 @@
         </AggregateFunctions>
         <Dimensions>
           <Dimension>CATEGORY</Dimension>
-          <Dimension>YEAR</Dimension>
-          <Dimension>MONTH</Dimension>
           <Dimension>WEEKDAY</Dimension>
           <Dimension>SALESPERSONTYPE</Dimension>
           <Dimension>CUSTOMERTYPE</Dimension>
